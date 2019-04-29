@@ -1,0 +1,22 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node ./app"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "~4.16.0",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.3",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.10",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.1.1"
+  }
+}
