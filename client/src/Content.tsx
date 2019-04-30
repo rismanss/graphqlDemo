@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 interface Props {
-  name: string;
+  subTitle: string;
 }
 
 interface State {
@@ -13,16 +13,28 @@ export default class Content extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      text: 'hello.. ',
+      text: 'Graphql Demo',
     };
   }
   render() {
-    const { name } = this.props;
+    const { subTitle } = this.props;
     return (
       <View>
-        <Text>Hello Expo..!</Text>
-        <Text>{this.state.text} { name }</Text>
+        <Text style={styles.title}>{ this.state.text }</Text>
+        <Text style={styles.subTitle}>{ subTitle }</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  subTitle: {
+    textAlign: 'center',
+    color: 'grey',
+  },
+});
